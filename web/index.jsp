@@ -175,7 +175,7 @@
               我们提供详细的委托信息，让您可以快速了解并选择适合自己的委托。
               不再浪费时间搜索兼职工作，立即来委托大厅探索属于您的兼职机会吧！
             </div>
-            <%--            向委托服务器发出请求全部委托--%>
+            <%--            向委托服务器发出请求全部委托且是分页形式--%>
             <a href="${pageContext.request.contextPath}/doGetCommissionPage" class="btn btn-primary mt-2">查看</a>
           </div>
         </div>

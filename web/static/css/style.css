@@ -1,0 +1,12 @@
+/* 只有当屏幕尺寸大于768时生效 */
+@media (min-width: 768px){
+    .news-input{
+        width: 50%;
+    }
+}
+
+body::before{
+    display: block;
+    content: '';
+    height: 56px;
+}

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兼职服务平台</title>
+    <link href="..\bootstrap-5.3.2-dist\css\bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="..\css\style.css">
+</head>
+
+<!-- 格式化一下：alt+shift+f -->
+
+<body>
+    <!-- 固定菜单栏 -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+        <!-- 导航栏里的内容居中 -->
+        <div class="container">
+            <a href="index.html" class="navbar-brand">兼职服务平台</a>
+
+            <!-- 设置一个导航栏切换器按钮，这个切换器按钮通过navameny包括下面的测试文字*3 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <!-- margin start = margin left -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="employee_register.html">我要兼职</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="boss_register.html">我是雇主</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">发布委托</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 这个标签和div差不多 -->
+    <!-- padding填充边距大小，背景黑色，文字白色 -->
+    <section class="p-5 bg-dark text-light text-center text-sm-start">
+        <!-- 内容居中 -->
+        <div class="container">
+            <!-- 左半部分和右半部分左右排列 -->
+            <div class="d-flex">
+                <div>
+                    <!-- 变成警告色文字 -->
+                    <h1>关于我们的<span class="text-warning">兼职平台</span></h1>
+                    <p class="my-4 lh-2.5">
+                        <!-- margin-top margin-bottom 这段话有4的上下（y）间距 -->
+                        Welcome to our revolutionary part-time platform, where opportunities and
+                        success converge! Are you ready to embark on a journey that will redefine the way you work and
+                        thrive? Look no further, because our platform is here to empower you and unleash your true
+                        potential!<br>
+
+                        Don't settle for mediocrity when greatness awaits you. Embrace the future of part-time work with
+                        [Your Platform Name] and let your dreams take flight. Get ready to leave a lasting impact and
+                        forge a path towards unlimited possibilities!
+                    </p>
+                    </p>
+                    <a class="btn btn-primary btn-lg" href="#">了解更多</a>
+                </div>
+                <img src="..\img\油画风.png" alt="showcase" class="w-50 d-none d-md-block">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <!-- 在Bootstrap中，主题色（primary）默认是一种蓝色 -->
+        <section class="p-5 bg-primary text-light">
+            <!-- 内容居中 -->
+            <div class="container">
+                <!-- 弹性盒子布局 -->
+                <div class="d-md-flex justify-content-between align-items-center">
+                    <!-- margin-bottom -->
+                    <h3 class="mb-3">现在注册账号立刻开始兼职吧</h3>
+                    <!-- 文本框加按钮叫做inputgroup -->
+                    <div class="input-group news-input">
+                        <input type="text" class="form-control" placeholder="请输入你的用户名">
+                        <button class="btn btn-dark btn-lg">注册</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="p-5">
+        <div class="container">
+            <!-- 这里的row与下方的col联动，等分屏幕后，col都在同一行 -->
+            <!-- 表示网格系统中列（Column）之间的间距 -->
+            <!-- 在Bootstrap中，网格系统将页面分成12个等宽的列。
+                通过使用col类，可以将一个元素定义为网格系统中的一列，
+                并指定该列在不同屏幕大小下所占的列数。例如，col-6表示该元素是一列，
+                占用网格系统中的6个等分（即占据一半的宽度，因为总共有12个等分）。 -->
+            <div class="row g-4">
+                <div class="col-md">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body  text-center">
+                            <div class="card-title">
+                                测试代码1
+                            </div>
+                            <div class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aut laudantium itaque
+                                nisi. Sunt quis doloribus distinctio, enim aspernatur iure inventore! Rem obcaecati
+                            </div>
+                            <!-- margin-top -->
+                            <a href="#" class="btn btn-primary mt-2">测试代码</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card bg-secondary text-light">
+                        <div class="card-body text-center">
+                            <div class="card-title">
+                                测试代码2
+                            </div>
+                            <div class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aut laudantium itaque
+                                nisi. Sunt quis doloribus distinctio, enim aspernatur iure inventore! Rem obcaecati
+                            </div>
+                            <a href="#" class="btn btn-dark mt-2">测试代码</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body text-center">
+                            <div class="card-title">
+                                测试代码3
+                            </div>
+                            <div class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aut laudantium itaque
+                                nisi. Sunt quis doloribus distinctio, enim aspernatur iure inventore! Rem obcaecati
+                            </div>
+                            <a href="#" class="btn btn-primary mt-2">测试代码</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="p-5">
+        <!-- 创建一个定宽的容器，在小屏幕设备上居中对齐。 -->
+        <div class="container">
+            <!-- 水平和垂直居中 -->
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md p-5">
+                    <!-- img-fluid不超过这个div的大小 -->
+                    <img src="..\img\油画风.png" alt="error" class="img-fluid">
+                </div>
+                <div class="col-md">
+                    <h2>测试代码</h2>
+                    <!-- 一个字体样式 -->
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit maxime ea
+                        expedita,
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, rerum aliquam beatae tenetur
+                        ipsam laboriosam aut eveniet cumque! Molestias corrupti sunt quasi fuga eos velit sit repellat
+                        sapiente id nesciunt!
+                    </p>
+                    <a href="" class="btn btn-light">查看详情</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="p-5 bg-dark text-light">
+        <!-- 创建一个定宽的容器，在小屏幕设备上居中对齐。 -->
+        <div class="container">
+            <!-- 水平和垂直居中 -->
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md">
+                    <h2>测试代码</h2>
+                    <!-- 一个字体样式 -->
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit maxime ea
+                        expedita,
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, rerum aliquam beatae tenetur
+                        ipsam laboriosam aut eveniet cumque! Molestias corrupti sunt quasi fuga eos velit sit repellat
+                        sapiente id nesciunt!
+                    </p>
+                    <a href="" class="btn btn-light">查看详情</a>
+                </div>
+                <div class="col-md p-5">
+                    <!-- img-fluid不超过这个div的大小 -->
+                    <img src="..\img\油画风.png" alt="error" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="p-5">
+        <div class="container">
+            <h2 class="text-center">常见问题</h2>
+            <!-- 手风琴组件 -->
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Accordion Item #1
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse show"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                            demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
+                            body.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Accordion Item #2
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                            demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
+                            body. Let's imagine this being filled with some actual content.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            Accordion Item #3
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                            demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
+                            body. Nothing more exciting happening here in terms of content, but just filling up the
+                            space to make it look, at least at first glance, a bit more representative of how this would
+                            look in a real-world application.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="p-5 bg-primary">
+        <div class="container">
+            <h2 class="text-center text-light">主题介绍</h2>
+            <p class="lead text-center text-white md-5">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias accusamus eaque fugiat sunt adipisci
+                saepe unde suscipit ad nesciunt. Molestias recusandae id eius? Id debitis voluptate amet neque dolore
+                repellendus!
+            </p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <img src="..\img\1.png" alt="error" class="img-fluid mb-3 rounded-circle">
+                            <h3 class="card-title">测试</h3>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quos voluptate aut
+                                provident corporis expedita repellat in, magni reprehenderit et asperiores pariatur
+                                autem
+                                consequatur. Eveniet distinctio amet doloribus perspiciatis alias!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-ligh">
+                        <div class="card-body text-center">
+                            <img src="..\img\1.png" alt="error" class="img-fluid mb-3 rounded-circle">
+                            <h3 class="card-title">测试</h3>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quos voluptate aut
+                                provident corporis expedita repellat in, magni reprehenderit et asperiores pariatur
+                                autem
+                                consequatur. Eveniet distinctio amet doloribus perspiciatis alias!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-ligh">
+                        <div class="card-body text-center">
+                            <img src="..\img\1.png" alt="error" class="img-fluid mb-3 rounded-circle">
+                            <h3 class="card-title">测试</h3>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quos voluptate aut
+                                provident corporis expedita repellat in, magni reprehenderit et asperiores pariatur
+                                autem
+                                consequatur. Eveniet distinctio amet doloribus perspiciatis alias!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-lighy">
+                        <div class="card-body text-center">
+                            <img src="..\img\1.png" alt="error" class="img-fluid mb-3 rounded-circle">
+                            <h3 class="card-title">测试</h3>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quos voluptate aut
+                                provident corporis expedita repellat in, magni reprehenderit et asperiores pariatur
+                                autem
+                                consequatur. Eveniet distinctio amet doloribus perspiciatis alias!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="p-5">
+        <div class="container">
+            <h2 class="text-center mb-4">联系我们</h2>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">电话：</li>
+            <li class="list-group-item">邮箱：</li>
+            <li class="list-group-item">地址：</li>
+        </ul>
+    </section>
+
+    <footer class="p-5 bg-dark text-white text-center">
+        <div class="container">
+            <p class="lead">
+                Copyright &copf; 2023 211164334 牛祎然
+            </p>
+        </div>
+    </footer>
+
+    <script src="..\bootstrap-5.3.2-dist\js\bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

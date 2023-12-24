@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兼职人员注册</title>
+    <link href="..\bootstrap-5.3.2-dist\css\bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="..\css\style.css">
+</head>
+
+<body>
+    <!-- 固定菜单栏 -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+        <!-- 导航栏里的内容居中 -->
+        <div class="container">
+            <a href="index.html" class="navbar-brand">兼职服务平台</a>
+
+            <!-- 设置一个导航栏切换器按钮，这个切换器按钮通过navameny包括下面的测试文字*3 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <!-- margin start = margin left -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="employee_register.html">我要兼职</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="boss_register.html">我是雇主</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">发布委托</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 注册表单 -->
+    <section class="p-5 bg-secondary text-light">
+        <!-- 内容居中 -->
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-5">
+                    <h1 class="text-center mb-4">注册成为兼职者</h1>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="用户名">
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" placeholder="密码">
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" placeholder="确认密码">
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg">注册</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="p-5">
+        <!-- 创建一个定宽的容器，在小屏幕设备上居中对齐。 -->
+        <div class="container">
+            <!-- 水平和垂直居中 -->
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md p-5">
+                    <!-- img-fluid不超过这个div的大小 -->
+                    <img src="..\img\油画风.png" alt="error" class="img-fluid">
+                </div>
+                <div class="col-md">
+                    <h2>测试代码</h2>
+                    <!-- 一个字体样式 -->
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit maxime ea
+                        expedita,
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, rerum aliquam beatae tenetur
+                        ipsam laboriosam aut eveniet cumque! Molestias corrupti sunt quasi fuga eos velit sit repellat
+                        sapiente id nesciunt!
+                    </p>
+                    <a href="" class="btn btn-light">查看详情</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="p-5 bg-dark text-light">
+        <!-- 创建一个定宽的容器，在小屏幕设备上居中对齐。 -->
+        <div class="container">
+            <!-- 水平和垂直居中 -->
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md">
+                    <h2>测试代码</h2>
+                    <!-- 一个字体样式 -->
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit maxime ea
+                        expedita,
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, rerum aliquam beatae tenetur
+                        ipsam laboriosam aut eveniet cumque! Molestias corrupti sunt quasi fuga eos velit sit repellat
+                        sapiente id nesciunt!
+                    </p>
+                    <a href="" class="btn btn-light">查看详情</a>
+                </div>
+                <div class="col-md p-5">
+                    <!-- img-fluid不超过这个div的大小 -->
+                    <img src="..\img\油画风.png" alt="error" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部版权信息 -->
+    <footer class="bg-dark text-light py-3">
+        <div class="container text-center">
+            <p>版权所有 &copy; 2023</p>
+        </div>
+    </footer>
+
+    <!-- 引入js文件 -->
+    <script src="..\bootstrap-5.3.2-dist\js\bootstrap.min.js"></script>
+</body>
+
+</html>

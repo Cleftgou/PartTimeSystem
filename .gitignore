@@ -1,2 +1,57 @@
-# 项目排除路径
-/out/
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.next
+pom.xml.last
+pom.xml.backup
+pom.xml.original
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+*.class
+*.log
+*.jar
+*.war
+*.ear
+*.tmp
+*.bak
+*.swp
+*.swo
+*.DS_Store
+*.out
+*.pid
+*.lock
+
+# System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# OS X
+.DS_Store
+
+# Logs
+logs/
+
+# Local configuration file (application.properties)
+src/main/resources/application-local.properties
+src/test/resources/application-local.properties
+
+# IntelliJ IDEA Code Style Settings
+.idea/codeStyles/
+
+# IntelliJ IDEA Inspection Settings
+.idea/inspectionProfiles/
+
+# IntelliJ IDEA Run Configurations
+.idea/runConfigurations/

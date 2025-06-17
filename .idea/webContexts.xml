@@ -3,7 +3,10 @@
   <component name="WebContextManager">
     <option name="state">
       <map>
+        <entry key="file://$PROJECT_DIR$/web/JSP/commission/commission_detail.jsp" value="file://$PROJECT_DIR$/web/JSP/commission" />
         <entry key="file://$PROJECT_DIR$/web/JSP/commission/commission_exhibit.jsp" value="file://$PROJECT_DIR$/web/JSP/commission" />
+        <entry key="file://$PROJECT_DIR$/web/JSP/commission/completed_commissions.jsp" value="file://$PROJECT_DIR$/web/JSP/commission" />
+        <entry key="file://$PROJECT_DIR$/web/JSP/employer/employer_register.jsp" value="file://$PROJECT_DIR$/web/JSP/employer" />
       </map>
     </option>
   </component>

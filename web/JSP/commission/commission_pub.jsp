@@ -132,7 +132,7 @@
 <!-- 底部版权信息 -->
 <footer class="bg-dark text-light py-3">
     <div class="container text-center">
-        <p>版权所有 &copy; 2023</p>
+        <p>版权所有 &copy; 2025</p>
     </div>
 </footer>
 

@@ -75,7 +75,7 @@
           无论您是想要探索新领域、展示才华，还是积累宝贵的经验，我们将为您开辟通往无限可能的道路。
           在这里，您可以留下持久的影响，创造出令人瞩目的成就。
         </p>
-        <a class="btn btn-primary btn-lg" href="#">了解更多</a>
+        <a class="btn btn-primary btn-lg" href="#"></a>
       </div>
       <div class="col-md-6">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -246,7 +246,7 @@
 <footer class="p-5 bg-dark text-white text-center">
   <div class="container">
     <p class="lead">
-      Copyright &copy; 2023
+      Copyright &copy; 2025
     </p>
   </div>
 </footer>

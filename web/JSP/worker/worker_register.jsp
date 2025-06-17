@@ -108,6 +108,7 @@
     </div>
 </section>
 
+<!-- 兼职求职者优势展示区 -->
 <section class="p-5">
     <!-- 创建一个定宽的容器，在小屏幕设备上居中对齐。 -->
     <div class="container">
@@ -118,39 +119,40 @@
                 <img src="${pageContext.request.contextPath}/static/img/测试图片.png" alt="error" class="img-fluid">
             </div>
             <div class="col-md">
-                <h2>测试代码</h2>
+                <h2>海量兼职机会，灵活时间安排</h2>
                 <!-- 一个字体样式 -->
-                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit maxime ea
-                    expedita,
-                </p>
+                <p class="lead">轻松找到适合你的兼职工作，开启灵活收入新方式</p>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, rerum aliquam beatae tenetur
-                    ipsam laboriosam aut eveniet cumque! Molestias corrupti sunt quasi fuga eos velit sit repellat
-                    sapiente id nesciunt!
+                    无论你是学生、上班族还是自由职业者，我们都能为你提供丰富的兼职选择。<br>
+                    <br>
+                    平台汇聚餐饮服务、零售促销、活动执行、家教辅导等多种类型兼职，满足你的技能和时间需求。
                 </p>
-                <a href="" class="btn btn-light">查看详情</a>
+                <a href="" class="btn btn-light">查看热门兼职</a>
             </div>
         </div>
     </div>
 </section>
 
+<!-- 求职者服务功能区 -->
 <section class="p-5 bg-dark text-light">
     <!-- 创建一个定宽的容器，在小屏幕设备上居中对齐。 -->
     <div class="container">
         <!-- 水平和垂直居中 -->
         <div class="row align-items-center justify-content-between">
             <div class="col-md">
-                <h2>测试代码</h2>
+                <h2>全方位服务保障，求职无忧</h2>
                 <!-- 一个字体样式 -->
-                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit maxime ea
-                    expedita,
-                </p>
+                <p class="lead">从注册到上岗，我们全程为你提供专业支持</p>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, rerum aliquam beatae tenetur
-                    ipsam laboriosam aut eveniet cumque! Molestias corrupti sunt quasi fuga eos velit sit repellat
-                    sapiente id nesciunt!
+                    所有兼职信息均经过严格审核，确保真实可靠。我们还提供：
                 </p>
-                <a href="" class="btn btn-light">查看详情</a>
+                <ul class="mt-3">
+                    <li><i class="bi bi-check-circle text-success"></i> 智能匹配系统，精准推荐适合你的兼职</li>
+                    <li><i class="bi bi-check-circle text-success"></i> 简历模板与优化建议，提升求职成功率</li>
+                    <li><i class="bi bi-check-circle text-success"></i> 在线沟通工具，直接与雇主交流</li>
+                    <li><i class="bi bi-check-circle text-success"></i> 薪资保障机制，确保劳动所得</li>
+                </ul>
+                <a href="" class="btn btn-light">了解服务详情</a>
             </div>
             <div class="col-md p-5">
                 <!-- img-fluid不超过这个div的大小 -->
@@ -163,7 +165,7 @@
 <!-- 底部版权信息 -->
 <footer class="bg-dark text-light py-3">
     <div class="container text-center">
-        <p>版权所有 &copy; 2023</p>
+        <p>版权所有 &copy; 2025</p>
     </div>
 </footer>
 
@@ -171,5 +173,3 @@
 <script src="${pageContext.request.contextPath}/static/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
 </body>
 </html>
-
-

@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: bairimengchang
-  Date: 2023/11/30
-  Time: 10:28
-  To change this template use File | Settings | File Templates.
---%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
@@ -14,24 +7,25 @@
     <link href="${pageContext.request.contextPath}/static/bootstrap-icons-1.11.2/font/bootstrap-icons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/style.css">
     <script>
-        //定义放弃委托的方法（提示信息）
+        // 放弃委托的方法
         function outCommission(c_id){
             var bo = confirm("是否确认放弃编号为"+c_id+"的委托");
             if (bo){
-                //确认放弃
-                //提交请求到委托服务器的修改委托状态功能：
                 location.href="${pageContext.request.contextPath}/doUpdateStateWorkerId?c_state=true&c_id="+c_id+"&w_id=0";
             }
         }
 
-        //定义修改委托的方法（提示信息）
+        // 标记委托为已完成的方法
         function updateCommission(c_id){
             var bo = confirm("是否确认已完成编号为"+c_id+"的委托");
             if (bo){
-                //确认已完成
-                //提交请求到委托服务器的修改委托状态功能：
                 location.href="${pageContext.request.contextPath}/doUpdateStateWorkerId?c_state=success&c_id="+c_id+"&w_id=0";
             }
+        }
+
+        // 前往评价页面的方法
+        function goToEvaluate(c_id){
+            location.href="${pageContext.request.contextPath}/commission_detail.jsp?job_id="+c_id;
         }
     </script>
 </head>
@@ -41,18 +35,13 @@
 </c:if>
 <c:if test="${sessionScope.worker.w_name != null}">
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top border-bottom border-secondary">
-        <!-- 导航栏里的内容居中 -->
         <div class="container">
             <a href="${pageContext.request.contextPath}" class="navbar-brand">兼职服务平台</a>
-
-            <!-- 设置一个导航栏切换器按钮，这个切换器按钮通过navameny包括下面的测试文字*3 -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ms-auto">
-                    <!-- margin start = margin left -->
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.request.contextPath}/doWorkerExit"><i class="bi bi-box-arrow-in-left"></i>退出登录</a>
                     </li>
@@ -67,12 +56,10 @@
         </div>
     </nav>
     <section class="p-5 bg-secondary text-light">
-        <!-- 创建一个定宽的容器，在小屏幕设备上居中对齐。 -->
         <div class="container">
-            <!-- 水平和垂直居中 -->
             <div class="card mb-3">
                 <div class="card-body">
-                    <h5 class="card-title">w_name: ${sessionScope.worker.w_name}</h5>
+                    <h5 class="card-title">用户名: ${sessionScope.worker.w_name}</h5>
                     <p class="card-text">ID: ${sessionScope.worker.w_id}</p>
                 </div>
             </div>
@@ -86,8 +73,14 @@
 
             <div class="card mb-3">
                 <div class="card-body">
-                        <%--                使用ajax应该可以解决每次都要刷新的问题--%>
-                    <h5 class="card-title">加载已接取的委托</h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="card-title">已接取的委托</h5>
+                        <!-- 新增：查看已完成委托按钮 -->
+                        <a href="${pageContext.request.contextPath}/doSelectCompletedCommissionByW_id?w_id=${sessionScope.worker.w_id}"
+                           class="btn btn-success">
+                            <i class="bi bi-check-circle me-2"></i> 查看已完成委托
+                        </a>
+                    </div>
                     <a class="card-text" href="${pageContext.request.contextPath}/doSelectCommissionByW_name?w_name=${sessionScope.worker.w_name}">刷新委托列表</a>
                 </div>
             </div>
@@ -95,19 +88,57 @@
             <div class="card mb-3">
                 <div class="card-body">
                     <c:forEach items="${requestScope.commissionListByW_name}" var="commission" varStatus="commissionStatus">
-                        <h5 class="card-title">委托${commissionStatus.count}</h5>
-                        <ul class="list-group">
-                            <li class="list-group-item">委托编号 ${commission.c_id}</li>
-                            <li class="list-group-item">委托标题 ${commission.c_title}</li>
-                            <li class="list-group-item">委托描述 ${commission.c_description}</li>
-                            <li class="list-group-item">委托状态 ${commission.c_state}</li>
-                            <li class="list-group-item">委托发布人 ${commission.c_employer_id}</li>
+                        <div class="border p-3 mb-3 rounded">
+                            <h5 class="mb-3">委托 ${commissionStatus.count}</h5>
+                            <ul class="list-group mb-3">
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span>委托编号</span>
+                                    <span>${commission.c_id}</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span>委托标题</span>
+                                    <span>${commission.c_title}</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span>委托描述</span>
+                                    <span>${commission.c_description}</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span>委托状态</span>
+                                    <span>
+                                        <c:if test="${commission.c_state == 'true'}">
+                                            <span class="badge bg-success">可接取</span>
+                                        </c:if>
+                                        <c:if test="${commission.c_state == 'false'}">
+                                            <span class="badge bg-warning">已接取</span>
+                                        </c:if>
+                                        <c:if test="${commission.c_state == 'success'}">
+                                            <span class="badge bg-secondary">已完成</span>
+                                        </c:if>
+                                    </span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span>委托发布人</span>
+                                    <span>${commission.c_employer_id}</span>
+                                </li>
+                            </ul>
 
-                            <li class="list-group-item">
-                                <a href="javascript:outCommission(${commission.c_id})" class="btn btn-danger">放弃此委托</a>
-                                <a href="javascript:updateCommission(${commission.c_id})" class="btn btn-danger">设置委托已完成</a>
-                            </li>
-                        </ul>
+                            <div class="d-flex gap-2">
+                                <a href="javascript:outCommission(${commission.c_id})" class="btn btn-danger">
+                                    <i class="bi bi-x-circle me-1"></i> 放弃委托
+                                </a>
+                                <a href="javascript:updateCommission(${commission.c_id})" class="btn btn-primary">
+                                    <i class="bi bi-check-circle me-1"></i> 完成委托
+                                </a>
+
+                                <!-- 新增：评价按钮（仅已完成委托显示） -->
+                                <c:if test="${commission.c_state == 'success'}">
+                                    <a href="javascript:goToEvaluate(${commission.c_id})" class="btn btn-warning">
+                                        <i class="bi bi-star me-1"></i> 评价委托
+                                    </a>
+                                </c:if>
+                            </div>
+                        </div>
                     </c:forEach>
                 </div>
             </div>
@@ -119,17 +150,13 @@
     </section>
 
     <section class="p-5">
-        <!-- 创建一个定宽的容器，在小屏幕设备上居中对齐。 -->
         <div class="container">
-            <!-- 水平和垂直居中 -->
             <div class="row align-items-center justify-content-between">
                 <div class="col-md p-5">
-                    <!-- img-fluid不超过这个div的大小 -->
                     <img src="${pageContext.request.contextPath}/static/img/求职者个人空间1.png" alt="error" class="img-fluid">
                 </div>
                 <div class="col-md">
                     <h2>积极沟通</h2>
-                    <!-- 一个字体样式 -->
                     <p class="lead">
                         在兼职的过程中，遇到问题是难免的，但不要因此气馁或者放弃。
                     </p>
@@ -144,13 +171,10 @@
     </section>
 
     <section class="p-5 bg-dark text-light">
-        <!-- 创建一个定宽的容器，在小屏幕设备上居中对齐。 -->
         <div class="container">
-            <!-- 水平和垂直居中 -->
             <div class="row align-items-center justify-content-between">
                 <div class="col-md">
                     <h2>勇往直前</h2>
-                    <!-- 一个字体样式 -->
                     <p class="lead">
                         当你来到这里，你已经展现了对自己未来的无限可能的渴望和追求。
                     </p>
@@ -161,21 +185,18 @@
                     <a href="" class="btn btn-light">查看详情</a>
                 </div>
                 <div class="col-md p-5">
-                    <!-- img-fluid不超过这个div的大小 -->
                     <img src="${pageContext.request.contextPath}/static/img/求职者个人空间2.png" alt="error" class="img-fluid">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 底部版权信息 -->
     <footer class="bg-dark text-light py-3">
         <div class="container text-center">
-            <p>版权所有 &copy; 2023</p>
+            <p>版权所有 &copy; 2025</p>
         </div>
     </footer>
     <script src="${pageContext.request.contextPath}/static/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
 </c:if>
 </body>
 </html>
-

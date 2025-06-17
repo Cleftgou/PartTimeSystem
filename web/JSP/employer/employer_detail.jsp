@@ -72,7 +72,7 @@
         <!-- 水平和垂直居中 -->
         <div class="card mb-3">
             <div class="card-body">
-                <h5 class="card-title">e_name: ${sessionScope.employer.e_name}</h5>
+                <h5 class="card-title">名称: ${sessionScope.employer.e_name}</h5>
                 <p class="card-text">ID: ${sessionScope.employer.e_id}</p>
                 <p class="card-text">email: ${sessionScope.employer.e_email}</p>
             </div>

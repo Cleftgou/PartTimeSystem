@@ -152,30 +152,7 @@
     </div>
 </section>
 
-<section class="p-5">
-    <!-- 创建一个定宽的容器，在小屏幕设备上居中对齐。 -->
-    <div class="container">
-        <!-- 水平和垂直居中 -->
-        <div class="row align-items-center justify-content-between">
-            <div class="col-md p-5">
-                <!-- img-fluid不超过这个div的大小 -->
-                <img src="${pageContext.request.contextPath}/static/img/测试图片.png" alt="error" class="img-fluid">
-            </div>
-            <div class="col-md">
-                <h2>测试代码</h2>
-                <!-- 一个字体样式 -->
-                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit maxime ea
-                    expedita,
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, rerum aliquam beatae tenetur
-                    ipsam laboriosam aut eveniet cumque! Molestias corrupti sunt quasi fuga eos velit sit repellat
-                    sapiente id nesciunt!
-                </p>
-                <a href="" class="btn btn-light">查看详情</a>
-            </div>
-        </div>
-    </div>
+
 </section>
 
 <section class="p-5 bg-dark text-light">
@@ -184,10 +161,9 @@
         <!-- 水平和垂直居中 -->
         <div class="row align-items-center justify-content-between">
             <div class="col-md">
-                <h2>测试代码</h2>
+                <h2>为商家提供高效灵活的招聘解决方案</h2>
                 <!-- 一个字体样式 -->
-                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit maxime ea
-                    expedita,
+                <p class="lead">快速发布兼职需求，精准匹配优质人才，提升招聘效率
                 </p>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, rerum aliquam beatae tenetur

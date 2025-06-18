@@ -26,8 +26,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../../../../../../../../JAVA/apache-tomcat-10.1.12/lib/jsp-api.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../../apache-tomcat-10.1.12/lib/servlet-api.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../apache-tomcat-10.1.12/lib/jsp-api.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -36,14 +35,13 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../../../../../../../../JAVA/apache-tomcat-10.1.12/lib/servlet-api.jar!/" />
-          <root url="jar://$MODULE_DIR$/../../../apache-tomcat-10.1.12/lib/jsp-api.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../apache-tomcat-10.1.12/lib/servlet-api.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="jakarta.servlet.jsp.jstl-2.0.0 (2)" level="project" />
+    <orderEntry type="library" name="jakarta.servlet.jsp.jstl-2.0.0  (2)" level="project" />
     <orderEntry type="library" name="jakarta.servlet.jsp.jstl-api-2.0.0 (2)" level="project" />
   </component>
 </module>

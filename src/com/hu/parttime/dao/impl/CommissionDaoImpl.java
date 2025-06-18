@@ -197,7 +197,7 @@ public class CommissionDaoImpl implements CommissionDao {
         String sql = "SELECT commission.*\n" +
                 "FROM worker\n" +
                 "JOIN commission ON worker.w_id = commission.w_id\n" +
-                "WHERE worker.w_name = ?";
+                "WHERE worker.w_name = ? and commission.c_state = 'false'";
         List<Commission> commissionList = new ArrayList<>();
 
         //连接数据库

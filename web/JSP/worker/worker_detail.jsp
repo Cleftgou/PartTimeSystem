@@ -16,10 +16,10 @@
         }
 
         // 标记委托为已完成的方法
-        function updateCommission(c_id){
-            var bo = confirm("是否确认已完成编号为"+c_id+"的委托");
+        function updateCommission(c_id, w_id){
+            var bo = confirm(w_id + "是否确认已完成编号为"+c_id+"的委托");
             if (bo){
-                location.href="${pageContext.request.contextPath}/doUpdateStateWorkerId?c_state=success&c_id="+c_id+"&w_id=0";
+                location.href="${pageContext.request.contextPath}/doUpdateStateWorkerId?c_state=success&c_id="+c_id+"&w_id=" + w_id;
             }
         }
 
@@ -127,16 +127,9 @@
                                 <a href="javascript:outCommission(${commission.c_id})" class="btn btn-danger">
                                     <i class="bi bi-x-circle me-1"></i> 放弃委托
                                 </a>
-                                <a href="javascript:updateCommission(${commission.c_id})" class="btn btn-primary">
+                                <a href="javascript:updateCommission('${commission.c_id}', '${commission.w_id}')" class="btn btn-primary">
                                     <i class="bi bi-check-circle me-1"></i> 完成委托
                                 </a>
-
-                                <!-- 新增：评价按钮（仅已完成委托显示） -->
-                                <c:if test="${commission.c_state == 'success'}">
-                                    <a href="javascript:goToEvaluate(${commission.c_id})" class="btn btn-warning">
-                                        <i class="bi bi-star me-1"></i> 评价委托
-                                    </a>
-                                </c:if>
                             </div>
                         </div>
                     </c:forEach>

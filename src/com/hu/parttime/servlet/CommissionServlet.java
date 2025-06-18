@@ -190,7 +190,7 @@ public class CommissionServlet extends HttpServlet {
     }
 
     /*
-    根据求职者账号查询此人的委托列表
+    根据求职者账号查询此人的委托列表（查询进行中的）
      */
     protected void doSelectCommissionByW_name(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {

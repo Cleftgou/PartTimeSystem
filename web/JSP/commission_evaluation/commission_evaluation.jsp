@@ -1,24 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%
-    // 检查用户是否登录
-    Integer userId = (Integer) session.getAttribute("user_id");
-    if (userId == null) {
-        response.sendRedirect("login.jsp");
-        return;
-    }
-
-    // 获取委托ID并查询委托信息
-    String jobIdParam = request.getParameter("job_id");
-    if (jobIdParam == null || jobIdParam.isEmpty()) {
-        out.println("<p class=\"error\">无效的委托ID</p>");
-        return;
-    }
-    int jobId = Integer.parseInt(jobIdParam);
-
-    // 查询委托信息并验证用户是否有权评价
-    // (这里需要添加数据库查询逻辑，验证用户是否是委托参与者且委托已完成)
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,6 +28,10 @@
     </style>
 </head>
 <body>
+<c:if test="${sessionScope.worker.w_name == null}">
+    <h1>尚未登录，请先登录!!!<a href="<%=request.getContextPath()%>/index.jsp">返回主页去登录</a></h1>
+</c:if>
+<c:if test="${sessionScope.worker.w_name != null}">
 <!-- 导航栏 -->
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top border-bottom border-secondary">
     <div class="container">
@@ -57,13 +42,18 @@
         <div class="collapse navbar-collapse" id="navmenu">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/JSP/employer/employer_login.jsp">
-                        <i class="bi bi-people-fill"></i>切换账号
+                    <a class="nav-link" href="${pageContext.request.contextPath}/doWorkerExit">
+                        <i class="bi bi-box-arrow-in-left"></i>退出登录
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="commission_pub.jsp">
-                        <i class="bi bi-clipboard-plus-fill"></i>发布委托
+                    <a class="nav-link" href="${pageContext.request.contextPath}/doGetCommissionPage">
+                        <i class="bi bi-clipboard-plus-fill"></i>委托广场
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-person-circle"></i>我的
                     </a>
                 </li>
             </ul>
@@ -79,16 +69,7 @@
                     <h3 class="mb-0">评价委托</h3>
                 </div>
                 <div class="card-body">
-                    <form action="${pageContext.request.contextPath}/submit_evaluation" method="post">
-                        <input type="hidden" name="job_id" value="${commission.c_id}">
-                        <input type="hidden" name="user_id" value="${sessionScope.user_id}">
-                        <input type="hidden" name="user_type" value="${sessionScope.user_type}">
-
-                        <div class="mb-4">
-                            <h5 class="mb-2">委托标题: ${commission.c_title}</h5>
-                            <p class="text-muted">委托描述: ${commission.c_description}</p>
-                        </div>
-
+                    <form action="${pageContext.request.contextPath}/doEvaluate" method="post">
                         <div class="mb-4">
                             <label class="form-label">评分</label>
                             <div class="rating">
@@ -123,5 +104,6 @@
 </div>
 
 <script src="${pageContext.request.contextPath}/static/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+</c:if>
 </body>
 </html>

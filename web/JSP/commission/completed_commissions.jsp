@@ -8,7 +8,7 @@
   <script>
     // 前往评价页面的函数
     function goToEvaluate(c_id) {
-      location.href = "${pageContext.request.contextPath}/JSP/commission/commission_detail.jsp?job_id=" + c_id;
+      location.href = "${pageContext.request.contextPath}/JSP/commission_evaluation/commission_evaluation.jsp?job_id=" + c_id;
     }
   </script>
 </head>
